@@ -1,0 +1,79 @@
+What is Software Testing?
+    - The process to identify the quality, correctness, and completeness of developed computer software
+
+How many ways can we test a software?
+    - Manual
+    - Automation
+
+When do we go for automation?
+    - When frequent regression testing is required
+    - When repeated test case execution is required
+    - efficiency
+
+What are the tools that we have for automation?
+    - Selenium
+    - UFT/QTP
+    - Cucumber
+    - TestNG
+    - Katalon Studio
+
+Levels of Testing?
+    - Unit testing
+    - Integration testing
+    - System testing
+    - Acceptance testing
+
+Types of testing?
+    - Functional testing
+    - Non-functional testing (performance, security)
+
+What is Selenium?
+    - A set of tools that help us to automate webbased applications only
+    - It is usually used for performance testing
+
+Selenium suite...
+    1. Selenium IDE --> it is a plugin, record and play
+        cons: no programming
+
+    2. Selenium RC(Remote Control)
+        - Supports different languages
+        - it supports different browsers
+        - It requires a rc server
+
+    3. Selenium Webdriver
+        - Supports different browsers
+        - It will support different programming languages
+
+    4. Selenium Grid
+        - consists of a node and a hub
+        - run test cases in parallel on different browsers
+
+Selenium 1
+Selenium 2--> Selenium RC and Webdriver combined
+Selenium 3--> made improvements to Selenium 2
+Selenium 4--> brand new, some changes and improvements in the communication protocols
+
+Advantages of Selenium:
+    - Open Source!!
+    - Compatible with different languages (Java, ruby, C#)
+    - it allows you to have your test cases run on different browsers
+    - It is not OS dependant (Windows, MAC, Linux)
+Disadvantages of Selenium:
+    - No technical support, as it is Open Source
+    -  We can not test desktop applications
+    - no built in reports
+    - Cannot test captchas, images and videos
+
+Selenium Architecture:
+--------Close vs Quit---------
+driver.close() --> it will close the current tab that we are on
+driver.quit()--> it will close the whole browser
+
+-------get() vs navigate()
+-- using navigate we can move forward, backward, and refresh the page
+--Using get(), we cannot do that
+
+
+All webpages are made of usually HTML, CSS, and js
+we have tags in
+

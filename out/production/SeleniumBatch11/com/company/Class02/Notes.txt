@@ -1,0 +1,81 @@
+Recap:
+What is Selenium?
+    - A set of tools that help us to automate webbased applications only
+    - No desktop application can be automated using Selenium
+    - functional testing is done using Selenium
+
+COmponents of Selenium Suite
+    1. Selenium IDE, RC, Webdriver, Grid
+Selenium 3 has combined webdriver and RC
+
+Advantages:
+1. open source
+2. works with different programming languages and browsers
+3. Not OS dependent
+
+Disadvantages:
+1. No support
+2. No built in reports
+3. No desktop application testing
+
+
+Webdriver: It's an interface
+
+Steps to open chrome using Selenium
+    1. Set System Properties (key, value)
+    key is the driver we are using
+    value is the path to the driver
+    2. Create an object of ChromeDriver()
+    3. Use method .get() and pass the url of the website that you want to launch
+
+
+    --difference in quit()--> quits the whole browser vs close()--> is going to close the current tab
+    --navigate() vs get()--> using navigate(), we can move forwards, backwards, and refresh. Cannot do this with get()
+
+    --fullscreen() and maximize() --methods to maximize and fullscreen the window
+
+
+------------------HTML-------------
+
+<html> these are tags
+    <body>
+        <input name="Alan"> //this tag does not require a closing tag. (name is the attribute, Alan is the value of the attribute
+    </body>
+</html>
+the webpage has an underlying html code
+--everything that we see on a webpage is basically appearing to us  through some kind of code
+DOM--> Document Object Model
+
+Web Element:
+everything that appears on the webpage is called a webelement
+
+Locator:
+It is the address or the position of the WebElement on the page
+
+8 locators:
+1. id
+2. Name
+3. TagName
+4. classname
+5. linktext
+6. partiallinktext
+7. xpath
+8. css
+
+
+A webelement have an underlying code
+this html code starts with a tag
+the tag may have different attributes
+these attributes are there to help locate those elements
+and in some cases, define the other criterias
+
+We must make sure that the locator that we are opting for is unique enough
+What if there are two same attribute with the same values?
+--Selenium will return the first one it finds in the code
+
+
+----------Homework-----------
+navigate to
+fill out the form
+click on register
+close the browser
