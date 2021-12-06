@@ -13,5 +13,6 @@ public class toolsQademo {
         driver.manage().window().maximize();
         WebElement TextBox=driver.findElement(By.id("userName"));
         TextBox.sendKeys("this is a test");
+        //*[@id="app"]/div/div/div[2]/div[2]/div[1]/div[3]/label
     }
 }
