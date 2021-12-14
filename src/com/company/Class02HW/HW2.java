@@ -32,7 +32,7 @@ public class HW2 {
         Thread.sleep(1000);
         driver.findElement(By.name("websubmit")).click();
         Thread.sleep(1000);
-        driver.close();
+       // driver.close();
 
 
 

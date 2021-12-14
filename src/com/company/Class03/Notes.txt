@@ -1,0 +1,39 @@
+**************Selenium Class03************************
+What are Web Elements?
+    - Basically anything you see on a web page
+What are locators?
+    - It is the tags that mark the location of the web elements
+    - there are 8 types of locators
+
+
+***********XPATH*******************
+Why do we need XPath locator?
+    - Developers may not have provided other locators in the html
+    - By using xpath, we can identify those web elements easily
+
+What is an xpath?
+    - XPath is just like a query language that helps you to identify elements
+    - Query languages are used to "query" or find something in your databases
+
+Types of Xpath:
+1. Absolute XPath
+--> starts with a starting node in html
+it starts with a single slash
+e.g. //html/body/div/div[2]/div/div/div/div/div[2]/div/div/form/div[2]/button
+2. Relative XPath
+Syntax:
+starts with //tagname[@attribute='attribute value']
+
+Example:
+//input[@type='password']
+hey, can you find me the tag input who has an attribute "type" with the attribute value "password"
+
+identify the element by its text:
+//tagname[text()='text value']
+Can you find me the tag a which has text
+
+identifying elements using contain method
+//tagname[contains(@attribute,'attribute value')]
+hey, can you find me the tag which contains the attribute _________
+
+The Advance XPath:

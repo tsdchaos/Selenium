@@ -1,0 +1,79 @@
+1. How many kinds of X-Path?
+    -Absolut and Relative
+Relative:
+    1. Inspecting using attributes
+        //tagname[@attribute='attribute value']
+
+    2. inspecting using text
+        //tagname[text()='text']
+
+    3. Identify by using contain method:
+        //tagname[contains(@attribute, 'attribute value')]
+        //tagname[contains(text(),'partial text')]
+    Example:
+        <input class="form", id="form0">
+        //input[contains@id,'form')]
+
+    4. identify using starts-with method:
+    will identify the elements with that starting partial value
+
+    //tagname[starts-with(@attribute, 'partial starting value')]
+    //tagname[starts-with(text(), 'partial starting value')]
+
+
+
+-------Topic Advanded XPath--------------
+
+Advanced XPath is based upon parent/child relationship
+1. Identifying element using following sibling
+    //tagname[@attribute='attribute value']/following-sibling::tagname
+    go to the tagname whose has attribute with value 'attribute value' :: now get me the following sibling of this tag
+    //input[@id='message']/following-sibling::label
+    go to the tagname input which has the attribute ID with value message now get me its following sibling
+    with tagname "label"
+    --> in order to use this advance xpath (following sibling, we need to identify one sibling that can be identified uniquely)
+    //input[@id='message']/preceding-sibling::label
+    The above functions the same as following sibling, just preceding instead of following
+
+2. identify elements using precedng sibling
+            //tagname[@attribute='attribute value']/preceding-sibling::tagname
+            //input[@id='message']/preceding-sibling::label
+            The above functions the same as following sibling, just preceding instead of following
+
+3. Identify the element using child parent
+        //tagname[@attribute='attribute value']/parent::tagname
+        //input[@id='message']/parent::label
+    You can also use ancestor::tagname to go back further in the parent/child tags to guide the XPath
+
+
+
+
+*****************************CSS Selector*******************************
+CSS(Cascading Styling Sheet)
+1. They are very fast
+2. Easily readable
+
+css doesn't allow you to locate using text()
+
+Syntax:
+tagname[attribute='attribute value']
+Shortcuts for CSS:
+    for ID --'#'
+    tagname#valueofattributeID
+
+    for class--'.'
+    tagname.valueforattributeclass
+
+contains method in css:
+    * symbol represents the contains method
+    tagname[attribute *='partial attribute value']
+
+    Starts with method in css:
+    ^ symbol represents starts with method in css
+    tagname[attribute ^='partial attribute value']
+
+    Ends with method in css:
+    $ symbol represents ends with method in css
+    tagname[attribute $='partial attribute value']
+
+
