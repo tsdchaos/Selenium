@@ -1,0 +1,31 @@
+------------------Radio Buttons-----------------
+We can select one radio button at a time
+
+isDisplayed--> a boolean method that tells us if a particular Web Element is on the page or not
+
+isEnabled--> a boolean method
+    - Checks if you can select that radio button or not
+
+isSelected--> a boolean method
+    - Checks if a particular button is selected or not
+
+------------------Drop Down Menus--------------------
+
+There are two types of dropdowns
+1. Single Select
+2. Multi Select
+
+1. SIngle Select
+    Method 1:
+        click on the drop down
+        then click on the option
+
+    Method 2:
+        Using a Select class
+            There is a condition in order to use Select class.
+
+If we use Select class, we can select in three different methods
+1. By Index
+2. By visible text
+3. By value
+
