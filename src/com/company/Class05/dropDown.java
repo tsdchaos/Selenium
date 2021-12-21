@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class dropDown {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
@@ -35,6 +37,19 @@ public class dropDown {
 
         //Select by Value
         select.selectByValue("Friday");
+
+        //getOptions returns all the option tags in the dropdown in a List of Strings
+        List<WebElement> allOptions=select.getOptions();
+        int size=allOptions.size();
+        System.out.println(size);
+
+        //Iterate through list all options and get the text of each option
+        for(int i=0; i<size; i++){
+            String OptionText= allOptions.get(i).getText();
+            System.out.println(OptionText);
+
+        }
+        driver.close();
 
 
     }

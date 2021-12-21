@@ -1,0 +1,59 @@
+Drop Down
+What is a Drop Down?
+    - It is a WebElement, just like links, radio buttons, text boxes, etc.
+    - It allows us to select from a dropdown menu that appears on the screen
+    - Two Type:
+        1) Single Select
+        2) Multi-Select
+    Two Methods to handle drop downs:
+        1) Click on the drop down and then Select the option
+        2) Use Select Class
+            Condition: <select> tag is there in the drop down
+            //If the <select> tag is not there, we cannot use Select class
+
+    Select class is a class available to us in selenium, which has different methods that help us to handle the drop downs
+
+    Steps to use Select Class:
+        1) Find the WebElement "dropdown" having the select class
+        2) Create an object of Select Class(webElement(which has the select tag))
+        3) Use any method provided by Select class to select the option you desire
+            a) .ByValue() --> parameter: the value attribute "value" in <options> tag
+            b) .ByIndex()--> parameter: the iondex of the option that you want to select
+            c) .ByVisibleText() --> parameter: the text in the tag <option> that we want to select
+        4) .getOptions()--> no parameter: returns us all the tags <options> which are child of <Select> tag
+
+Multiple Select drop down
+    1) isMultiple()--> if the drop down is multiselect or not (Boolean)
+    Additional Methods
+        a) deselectbyIndex();
+        b) deselectbyValue();
+        c) deselectbyVisibleText();
+        d) deselectAll();
+    exception:
+        No such element exception --> the WebElement you are looking for is not there on the page
+
+
+Alerts:
+    An alert is a pop up message, or takes the focus completely off the page
+    We cannot proceed in selenium until it is handled
+
+    3 Types of Alerts:
+        1) Web based alerts --> it is an html based alert / we can resolve them simply by inspecting
+        2) Javascript alerts/browser alerts --> We cannot handle them by inspecting, since they don't have HTML.
+           We handle them by using switchTo method in selenium
+        3) Window based alerts --> We cannot handle them with Selenium
+
+    Javascript alerts:
+    3 Types
+        1) Simple Alert --> Click ok, and it is done
+        2) Confirmation Alert --> Either cancel or Ok
+        3) Prompt Alert --> enter text and cancel or ok
+
+    How to handle these javascript alerts in Selenium
+    Using "alert interface"
+
+    The methods it gives us:
+    1) accept();
+    2) dismiss();
+    3 getText();
+
