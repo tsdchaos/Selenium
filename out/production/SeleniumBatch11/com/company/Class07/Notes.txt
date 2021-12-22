@@ -1,0 +1,48 @@
+Frames:
+Identify the iFrame:
+    1) Right click and see if you see view frame source. If so, it means it is an iFrame
+    2) use //iframe when inspecting the code, and it will show all the iFrames available
+        Example:
+            <html>
+                <body>
+                    <iframe>
+                        <html>
+                            <body>
+                            </body>
+                        </html>
+                    </iframe>
+                </body>
+            </html>
+
+Before interacting with frames, we need to tell our driver to switch to the desired frame
+
+There are three ways to interact with frames:
+    1) By index -->driver.switchTo().frame(int index)--> the index on which our iframe lies
+    2) By name or ID -->driver.switchTo().frame(String ID or Name)--> only id or name can be used
+    3) by WebElement --> driver.switchTo().frame(WebElement) --pass in the WebElement i.e. the desired frame
+
+defaultContent()--> switch the focus back to the main page
+in alerts--> no need to switch back focus
+in frames--> we have to switch our focus back to home page
+
+****************Authentication Alerts*******************
+Authentication alerts: we need to give user name and password
+in order to handle them, we need to pass the parameters (i.e. username and password) in the url
+
+https://admin:admin@the-internet.herokuapp.com/basic_auth
+
+How do you handle alerts in Selenium?
+By switching to the alert from the main page
+
+*******************Windows Handles**********************
+Selenium treats tabs and windows almost the same
+WindowHandle:
+    a uniqueID, the address of that window
+    it is 40 characters alphanumeric
+
+Handling Windows in Selenium:
+    In order to handle them, we will be using methods:
+        1) getWindowHandle(); --> give the address of the current window that Selenium is focusing on
+        2) getWindowHandles(); --> gives the addressed of all the windows
+To switch to a particular window
+driver.switchTo.window(Handle of the Desired Window)
