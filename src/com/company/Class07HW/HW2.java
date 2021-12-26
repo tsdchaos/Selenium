@@ -20,6 +20,7 @@ public class HW2 {
         //Switch to the Child frame
         WebElement childFrame= driver.findElement(By.cssSelector("iframe[srcdoc*='Child Iframe']"));
         driver.switchTo().frame(childFrame);
+        //Get text from Child frame
         String childFrameText=driver.findElement(By.xpath("//p[text()='Child Iframe']")).getText();
         System.out.println("The text in the child frame is: "+childFrameText);
     }

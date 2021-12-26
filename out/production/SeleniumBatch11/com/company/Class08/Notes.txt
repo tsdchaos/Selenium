@@ -1,0 +1,23 @@
+Window Handles (Continued)
+WindowHandles():
+    - Unique ID associated with each new window/tab
+How do we handle multiple windows in selenium?
+    1) getWindowHandles() --> gets all the handles -- return type: set of Strings
+    2) driver.switchTo.window(desired windowHandle);
+    getWindowHandles() --> this method is not taking care of maintaining the order in which tabs were opened
+Typically, only 1 window or tab at a time is maintained
+
+
+****************waits*******************
+1) ImplicitWait
+    -implicit wait is applied to all "driver.findElement"
+    If the element is found, no wait is applied
+    if the element is not found, then the wait is applied for a certain amount of time
+    *If the certain amount of time has passed and still the element is not found, we get an Exception
+        *NoSuchElement*
+    Syntax for this wait:
+        driver.manage().timeouts().implicitWait(time, units);
+            implicitWait(maximum amount of time before it throws an exception, units)
+    **impicit wait--> waits till the WebElement is found
+    2. ExplicitWait or WebDriver waits
+        these waits are used to tell the webDriver to wait till the certain condition is matched

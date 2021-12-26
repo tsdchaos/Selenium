@@ -33,10 +33,26 @@ public class windowHandle {
         System.out.println(windowHandles.size());
         //in order to print all window handles, we need to iterate through the Set
         Iterator<String> iterator=windowHandles.iterator();
-        String signUpPage= iterator.next();
+
+        while(iterator.hasNext()){
+            //switch to terms page
+            String handle=iterator.next();
+            //now switch to this particular handle/window
+            driver.switchTo().window(handle);
+            //make sure this is my desired window/tab
+            String title=driver.getTitle();
+            //if condition
+            if(title.equalsIgnoreCase("Google Terms of Service – Privacy & Terms – Google")){
+                System.out.println(title);
+                break;
+            }
+        }
+        /*   String signUpPage= iterator.next();
         String helpPageHandle=iterator.next();
         String termsPageHandle= iterator.next();
         String privacyPageHande=iterator.next();
+
+
         System.out.println("The window handle for the signup page is: "+signUpPage);
         System.out.println("The window handle for the help page is: "+helpPageHandle);
         System.out.println("The window handle for the terms page is: "+termsPageHandle);
@@ -46,6 +62,8 @@ public class windowHandle {
         //switch to help page
         driver.switchTo().window(termsPageHandle);
         System.out.println(driver.getTitle());
+
+         */
 
     }
 }
