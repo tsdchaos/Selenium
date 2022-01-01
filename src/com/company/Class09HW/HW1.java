@@ -40,6 +40,7 @@ public class HW1 {
         //Check to see if the button is displayed
         boolean hdnBtnDisplayed= hdnBtn.isDisplayed();
         System.out.println("Is the button displayed now? "+hdnBtnDisplayed);
+        driver.quit();
 
 
 
