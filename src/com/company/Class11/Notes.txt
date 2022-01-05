@@ -1,0 +1,43 @@
+***********Web Tables*************
+Scenarios for stale element exception
+1. The element we are working with got refresed
+2. The element is no longer there
+
+How to handle calendar with pagination
+1. Click on the calendar
+2. Locate the month and year and get the text
+3. If the desired month and year is there, select the dates ///if not, then click on next button till we reach our
+desired month and year
+4. Once the month is selected:
+    get the list of all the dates available in the calendar
+    traverse through them all and select the desired one, break the loop and set the boolean to false
+
+
+--Working with keys
+in selenium, we can replicate the behaviours of all the keys that are there on keyboard using the enum Keys
+e.g. Keys.ENTER, Keys.TAB, Keys.BACK_SPACE
+
+--taking screenshot
+1. To prove that the test case passed or failed
+
+--actionClass
+is given by Selenium to capture the keyboard and mouse events
+1. Move an element
+2. Drag and Drop
+3. Double click
+4. Right click
+
+--javaScript Executor
+It is in Selenium and can be executed on the browser
+--javaScriptExecutor allows us to execute javaScript code
+--javaScriptExecutor is an interface
+
+Why and when should we use it?
+    Only when selenium is unable to perform the operation!
+    e.g. you are unable to click on a webelement
+
+Using javaScript we can perform:
+    click operation
+    scroll the page
+    refresh the page
+    highlight an element
